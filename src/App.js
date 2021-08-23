@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
 import './App.css';
+import { Cards, Navbar } from './components';
 
 function App() {
+  
+  // const [cards, setCards] = useState([]);
+  // const [cart, setCart] = useState({});
+
+  // const fetchCards = async() => {
+  //   const {data} = await this.cards.list();
+  // }
+
+  // const fetchCart = async() => {
+  //   setCart(await this.cart.retrieve())
+  // }
+
+  // const handleAddToCart = async (cardsId, quantity) => {
+  //   const card = await this.card.add(cardsId, quantity);
+
+  //   setCart(card.cart)
+  // }
+
+  // useEffect(() => {
+  //   fetchCards();
+  //   fetchCart();
+  // }, []);
+
+  // console.log(cart);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Cards />
     </div>
   );
 }
